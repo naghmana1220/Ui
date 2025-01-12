@@ -35,7 +35,7 @@ const Header = () => {
               <Link href="/">Home</Link>
             </li>
             <li className="cursor-pointer hover:border-b-[#000000] hover:border-b-[0.5px] transition-all duration-300">
-            <Link href="/shop">Shop</Link>
+            <Link href="/Shop">Shop</Link>
             </li>
             <li className="cursor-pointer hover:border-b-[#000000] hover:border-b-[0.5px] transition-all duration-300">
             <Link href="/blog">Blog</Link>
@@ -49,7 +49,7 @@ const Header = () => {
 
         {/* Icons */}
         <div className="flex items-center gap-3">
-        <Link href={"/account"}><User className="hover:bg-[#f0d786] p-[6px] rounded" size={37}/></Link>
+        <Link href={"/account"}><User className=" p-[6px] rounded" size={37}/></Link>
           <Link href={"/"}><Search className=" p-[6px] rounded" size={37} /></Link>
           <Link href={"/"}><Heart className=" p-[6px] rounded" size={37}/></Link>
           <Link href={"/"}><ShoppingCart className=" p-[6px] rounded" size={37} /></Link>
@@ -69,7 +69,7 @@ const Header = () => {
                   <Link href="/" className="cursor-pointer hover:border-b-[#000000] hover:border-b-[0.5px] transition-all duration-300">Home</Link>
                 </li>
                 <li>
-                  <Link href="/shop" className="cursor-pointer hover:border-b-[#000000] hover:border-b-[0.5px] transition-all duration-300">Shop</Link>
+                  <Link href="/Shop" className="cursor-pointer hover:border-b-[#000000] hover:border-b-[0.5px] transition-all duration-300">Shop</Link>
                 </li>
                 <li>
                   <Link href="/blog" className="cursor-pointer hover:border-b-[#000000] hover:border-b-[0.5px] transition-all duration-300">Blog</Link>
