@@ -9,9 +9,12 @@ const Cardmain = () => {
   ];
 
   return (
-    <div className="flex flex-wrap justify-center space-x-4 bg-[#FAF3EA] mt-36 lg:pt-20 h-[270px]">
+    <div className="flex lg:flex-col md:flex-row flex-wrap  justify-around  bg-[#FAF3EA] mt-36 lg:pt-20 lg:h-[270px] lg:w-[1900px] sm:h-[670px]">
       {icons.map((icon, index) => (
-        <div key={index} className="flex flex-col items-center text-center p-4">
+        <div 
+          key={index} 
+          className="flex flex-col items-center text-center p-4 sm:w-full md:w-1/2 lg:w-1/4"
+        >
           <Image src={icon.src} alt={icon.title} width={50} height={50} />
           <h2 className="mt-2 text-lg font-semibold text-[#000000]">{icon.title}</h2>
           <p className="mt-1 text-sm text-[#9F9F9F]">{icon.text}</p>

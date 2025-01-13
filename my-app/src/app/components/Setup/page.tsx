@@ -14,7 +14,7 @@ export default function Setup() {
   ];
 
   return (
-    <section className="py-10  bg-gray-50">
+    <section className="py-10  bg-gray-50 ">
       <div className="container lg:mx-auto lg:w-[1900px]">
         <p className="text-lg font-medium text-center text-gray-600 ">
           Share your setup with
@@ -31,8 +31,8 @@ export default function Setup() {
               <Image
                 src={image.src}
                 alt={`Image ${index + 1}`}
-                width={400} // 
-                height={400} // 
+                width={400}  
+                height={400}  
                 className="object-cover w-full h-full"
               />
             </div>
