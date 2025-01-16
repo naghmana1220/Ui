@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Contact = () => {
   return (
@@ -98,9 +99,11 @@ const Contact = () => {
               placeholder="Message" 
               className="w-full p-2 border border-gray-300 rounded mb-4 h-24" 
             />
+            <Link href="/components/Thankyou">
             <button className="w-full py-3 bg-[#B88E2F] text-white font-semibold rounded">
               Submit
             </button> 
+            </Link>
           </div>
         </div>
       </div>

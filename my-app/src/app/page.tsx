@@ -1,14 +1,15 @@
 
-
-
-import Blog from "./components/Blog/page";
 import Contact from "./components/Contact/page";
-import Description from "./components/Description/page";
 import Explore from "./components/Explore";
 import Hero from "./components/Hero";
 import Product from "./components/Product";
 import Setup from "./components/Setup/page";
-import Shop from "./components/Shop/page"
+import Shop from "./components/Shop/page";
+import Blog from "./components/Blog/page";
+import Description from "./components/Description/page";
+import Thankyou from "./components/Thankyou/page";
+
+
 
 
 
@@ -19,11 +20,12 @@ export default function Home() {
 <Hero />
 <Product />
 <Explore />
-<Shop />
 <Setup />
-<Blog />
+<Shop />
 <Description />
+<Blog />
 <Contact />
+<Thankyou />
 </div>
   )
 }

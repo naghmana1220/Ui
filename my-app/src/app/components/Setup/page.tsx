@@ -10,11 +10,17 @@ export default function Setup() {
     { src: "/images/Set6.png", styles: "w-full h-92" },
     { src: "/images/Set7.png", styles: "w-94 h-60" },
     { src: "/images/Set8.png", styles: "w-94 h-92" },
-    { src: "/images/Set9.png", styles: "w-full h-78" },
+    { src: "/images/Cart1.png", styles: "w-full h-48" },
+    { src: "/images/cart3.png", styles: "w-full h-70" },
+    { src: "/images/Cart4.png", styles: "w-full h-60" },
+    { src: "/images/Cart5.png", styles: "w-full h-70" },
+    { src: "/images/Product7.png", styles: "w-full h-60" },
+    { src: "/images/Product5.png", styles: "w-full h-70" },
+    { src: "/images/Cart12.png", styles: "w-full h-60" },
   ];
 
   return (
-    <section className="py-10  bg-gray-50 ">
+    <section className="py-10  bg-gray-50  my-6">
       <div className="container lg:mx-auto lg:w-[1900px]">
         <p className="text-lg font-medium text-center text-gray-600 ">
           Share your setup with
