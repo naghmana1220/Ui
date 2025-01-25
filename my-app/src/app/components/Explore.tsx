@@ -1,4 +1,4 @@
-
+import Link from 'next/link';
 import Image from 'next/image';
 
 const Explore = () => {
@@ -8,9 +8,11 @@ const Explore = () => {
         <div className="ml-4 mt-4 md:mt-0 h-[300px]">
           <h2 className="text-4xl font-bold text-[#3A3A3A] mr-10 font-['Poppins]">50+ Beautiful rooms inspiration</h2>
           <p className="text-[#616161] mt-2">Our designer already made a lot of beautiful prototypes of rooms that inspire you</p>
+          <Link href="/components/Description">
           <button className="mt-4 bg-[#B88E2E] w-[176px] text-white py-2 px-4">
             Explore More
           </button>
+          </Link>
         </div>
 
         <div className="flex flex-col md:flex-row items-start sm:h-[400px] sm:w-[500px]">

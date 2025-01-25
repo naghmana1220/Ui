@@ -1,31 +1,127 @@
-"use client"
+ "use client"
 
-import { useState } from "react"
+//  import { useState } from "react"
 
-//original work
+// // //original work
 
-import Image from 'next/image';
-import Link from 'next/link';
+// import Image from 'next/image';
+// import Link from 'next/link';
+
+// const products = [
+//     { id: 1, title: "Syltherine", description: "Stylish cafe chair", price: "Rp 2.500.000", image: "/images/Product1.png" },
+//     { id: 2, title: "Laviosa", description: "Stylish cafe chair", price: "Rp 2.500.000", image: "/images/Product2.png" },
+//     { id: 3, title: "Loliota", description: "Luxury big sofa", price: "Rp 7.000.000", image: "/images/Product3.png" },
+//     { id: 4, title: "Respira", description: "Outdoor bar table and stool", price: "Rp 500.000", image: "/images/Product4.png" },
+//     { id: 5, title: "Grifo", description: "Night lamp", price: "Rp 1.500.000", image: "/images/Product5.png" },
+//     { id: 6, title: "Muggo", description: "Small mug", price: "Rp 150.000", image: "/images/Product6.png" },
+//     { id: 7, title: "Pringky", description: "Cute bed set", price: "Rp 7.000.000", image: "/images/Product7.png" },
+//     { id: 8, title: "Potty", description: "Minimalist flower pot", price: "Rp 500.000", image: "/images/Product8.png" },
+// ];
+
+// const Product = () => {
+    
+//     const [hoveredProductId, setHoveredProductId] = useState<number | null>(null);
+
+//     return (
+//         <div className="max-w-7xl mx-auto px-4 py-10 lg:w-[1900px]">
+//             <h2 className="text-3xl font-bold text-center mb-8 text-[#3A3A3A]">Our Products</h2>
+
+//             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+//                 {products.map((product) => (
+//                     <div
+//                         key={product.id}
+//                         className="relative border shadow-md flex flex-col items-center group"
+//                         onMouseEnter={() => setHoveredProductId(product.id)}
+//                         onMouseLeave={() => setHoveredProductId(null)}
+//                     >
+//                         <Image
+//                             src={product.image}
+//                             alt={product.title}
+//                             className="object-cover mb-4 w-[289px] h-[301px]"
+//                             width={285}
+//                             height={301}
+//                         />
+//                         <h3 className="text-lg font-semibold text-[#3A3A3A]">{product.title}</h3>
+//                         <p className="mb-2 text-[#898989] pr-4">{product.description}</p>
+//                         <span className="text-xl font-bold text-[#3A3A3A]">{product.price}</span>
+
+//                         {hoveredProductId === product.id && (
+//                             <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center gap-4">
+//                                 <button className="bg-white text-[#B88E2E] font-semibold px-4 py-2 rounded-md">
+//                                     Add to Cart
+//                                 </button>
+//                                 <div className="flex gap-2">
+//                                     <button className="text-white">🔗Share</button>
+//                                     <button className="text-white">↔Compare</button>
+//                                     <button className="text-white">♡Like</button>
+//                                 </div>
+//                             </div>
+//                         )}
+//                     </div>
+//                 ))}
+//             </div>
+
+//             <div className="flex justify-center mt-8">
+//                 <Link href="/components/Shop">
+//                     <button className="border-[1px] font-semibold w-[245px] h-[48px] border-[#B88E2E] text-[#B88E2E] px-4 py-2">
+//                         Show More
+//                     </button>
+//                 </Link>
+//             </div>
+//         </div>
+//     );
+// };
+
+// export default Product;
+
+
+
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 const products = [
-    { id: 1, title: "Syltherine", description: "Stylish cafe chair", price: "Rp 2.500.000", image: "/images/Product1.png" },
-    { id: 2, title: "Laviosa", description: "Stylish cafe chair", price: "Rp 2.500.000", image: "/images/Product2.png" },
-    { id: 3, title: "Loliota", description: "Luxury big sofa", price: "Rp 7.000.000", image: "/images/Product3.png" },
-    { id: 4, title: "Respira", description: "Outdoor bar table and stool", price: "Rp 500.000", image: "/images/Product4.png" },
-    { id: 5, title: "Grifo", description: "Night lamp", price: "Rp 1.500.000", image: "/images/Product5.png" },
-    { id: 6, title: "Muggo", description: "Small mug", price: "Rp 150.000", image: "/images/Product6.png" },
-    { id: 7, title: "Pringky", description: "Cute bed set", price: "Rp 7.000.000", image: "/images/Product7.png" },
-    { id: 8, title: "Potty", description: "Minimalist flower pot", price: "Rp 500.000", image: "/images/Product8.png" },
+    { id: 1, title: "Syltherine", description: "Stylish cafe chair", price: 2500000, image: "/images/Product1.png" },
+    { id: 2, title: "Laviosa", description: "Stylish cafe chair", price: 2500000, image: "/images/Product2.png" },
+    { id: 3, title: "Loliota", description: "Luxury big sofa", price: 7000000, image: "/images/Product3.png" },
+    { id: 4, title: "Respira", description: "Outdoor bar table and stool", price: 500000, image: "/images/Product4.png" },
+    { id: 5, title: "Grifo", description: "Night lamp", price: 1500000, image: "/images/Product5.png" },
+    { id: 6, title: "Muggo", description: "Small mug", price: 150000, image: "/images/Product6.png" },
+    { id: 7, title: "Pringky", description: "Cute bed set", price: 7000000, image: "/images/Product7.png" },
+    { id: 8, title: "Potty", description: "Minimalist flower pot", price: 500000, image: "/images/Product8.png" },
 ];
 
 const Product = () => {
-    
     const [hoveredProductId, setHoveredProductId] = useState<number | null>(null);
+    const [cart, setCart] = useState<any[]>([]);
+
+    // Add to Cart Function
+    const addToCart = (product: any) => {
+        const existingItem = cart.find((item) => item.id === product.id);
+        if (existingItem) {
+            setCart(
+                cart.map((item) =>
+                    item.id === product.id
+                        ? { ...item, quantity: item.quantity + 1 }
+                        : item
+                )
+            );
+        } else {
+            setCart([...cart, { ...product, quantity: 1 }]);
+        }
+        alert(`${product.title} added to cart!`);
+    };
+
+    // Remove from Cart Function
+    const removeFromCart = (productId: number) => {
+        setCart(cart.filter((item) => item.id !== productId));
+    };
 
     return (
         <div className="max-w-7xl mx-auto px-4 py-10 lg:w-[1900px]">
             <h2 className="text-3xl font-bold text-center mb-8 text-[#3A3A3A]">Our Products</h2>
 
+            {/* Product Listing */}
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                 {products.map((product) => (
                     <div
@@ -43,17 +139,22 @@ const Product = () => {
                         />
                         <h3 className="text-lg font-semibold text-[#3A3A3A]">{product.title}</h3>
                         <p className="mb-2 text-[#898989] pr-4">{product.description}</p>
-                        <span className="text-xl font-bold text-[#3A3A3A]">{product.price}</span>
+                        <span className="text-xl font-bold text-[#3A3A3A]">
+                            Rp {product.price.toLocaleString()}
+                        </span>
 
                         {hoveredProductId === product.id && (
                             <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center gap-4">
-                                <button className="bg-white text-[#B88E2E] font-semibold px-4 py-2 rounded-md">
+                                <button
+                                    className="bg-white text-[#B88E2E] font-semibold px-4 py-2 rounded-md"
+                                    onClick={() => addToCart(product)}
+                                >
                                     Add to Cart
                                 </button>
                                 <div className="flex gap-2">
-                                    <button className="text-white">🔗Share</button>
-                                    <button className="text-white">↔Compare</button>
-                                    <button className="text-white">♡Like</button>
+                                    <button className="text-white">🔗 Share</button>
+                                    <button className="text-white">↔ Compare</button>
+                                    <button className="text-white">♡ Like</button>
                                 </div>
                             </div>
                         )}
@@ -61,6 +162,46 @@ const Product = () => {
                 ))}
             </div>
 
+            {/* Cart Section */}
+            <div className="mt-10 p-4 bg-[#FCF8F3] rounded-md">
+                <h2 className="text-3xl font-semibold mb-4 text-gray-700">Cart</h2>
+                {cart.length > 0 ? (
+                    cart.map((item) => (
+                        <div
+                            key={item.id}
+                            className="flex items-center gap-4 border-b border-gray-300 py-4"
+                        >
+                            {/* Product Image */}
+                            <Image
+                                src={item.image}
+                                alt={item.title}
+                                width={80}
+                                height={80}
+                                className="rounded-md object-cover"
+                            />
+                            {/* Product Details */}
+                            <div className="flex-1">
+                                <h3 className="text-lg font-semibold">{item.title}</h3>
+                                <p className="text-gray-500">Quantity: {item.quantity}</p>
+                                <p className="text-gray-800 font-semibold">
+                                    Rp {(item.price * item.quantity).toLocaleString()}
+                                </p>
+                            </div>
+                            {/* Remove Button */}
+                            <button
+                                className="bg-red-500 text-white px-4 py-2 rounded-md"
+                                onClick={() => removeFromCart(item.id)}
+                            >
+                                Remove
+                            </button>
+                        </div>
+                    ))
+                ) : (
+                    <p className="text-gray-700">Your Cart is empty.</p>
+                )}
+            </div>
+
+            {/* Show More Button */}
             <div className="flex justify-center mt-8">
                 <Link href="/components/Shop">
                     <button className="border-[1px] font-semibold w-[245px] h-[48px] border-[#B88E2E] text-[#B88E2E] px-4 py-2">
@@ -73,5 +214,3 @@ const Product = () => {
 };
 
 export default Product;
-
-       

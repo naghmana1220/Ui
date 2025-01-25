@@ -253,6 +253,32 @@ const Header = () => {
         </div>
       </div>
 
+
+      {/* Mobile Header */}
+      <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
+        <SheetContent className="bg-white w-[15rem]" side={"left"}>
+          <SheetHeader>
+            <SheetTitle></SheetTitle>
+            <SheetDescription>
+              <ul className="flex flex-col gap-10">
+                <li>
+                  <Link href="/" className="cursor-pointer hover:border-b-[#000000] hover:border-b-[0.5px] transition-all duration-300">Home</Link>
+                </li>
+                <li>
+                  <Link href="#Shop" className="cursor-pointer hover:border-b-[#000000] hover:border-b-[0.5px] transition-all duration-300">Shop</Link>
+                </li>
+                <li>
+                  <Link href="#Blog" className="cursor-pointer hover:border-b-[#000000] hover:border-b-[0.5px] transition-all duration-300">Blog</Link>
+                </li>
+                <li>
+                  <Link href="#Contact" className="cursor-pointer hover:border-b-[#000000] hover:border-b-[0.5px] transition-all duration-300">Contact</Link>
+                </li>
+              </ul>
+            </SheetDescription>
+          </SheetHeader>
+        </SheetContent>
+      </Sheet>
+
       {/* Shopping Cart Modal */}
       {isCartOpen && (
         <Sheet open={isCartOpen} onOpenChange={setIsCartOpen}>

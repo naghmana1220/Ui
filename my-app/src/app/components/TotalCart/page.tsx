@@ -8,10 +8,10 @@ import { Button } from "@/components/ui/button";
  const TotalCart = () => {
      return (
       
-      <div className="sm:w-full sm:h-auto md:w-[1940px] md:h-auto xl:w-full lg:w-[1240px] ">
+      <div className="sm:w-full sm:h-auto md:w-[1940px] md:h-auto xl:w-full lg:w-[1900px] ">
       <Image   
       src="/images/bgCart1.png"
-      className="lg:w-[1940px] pointer-events-none object-cover h-auto"
+      className="lg:w-[1900px] pointer-events-none object-cover h-auto"
       alt="banner"
       width={1440}
       height={316}

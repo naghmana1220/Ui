@@ -1,5 +1,5 @@
-import Image from "next/image";
-import Link from "next/link";
+ import Image from "next/image";
+  import Link from "next/link";
 
 const Comparison = () => {
     return(
@@ -47,12 +47,12 @@ height={316}
        
         <div className="flex flex-col items-center   p-4 ">
 
-        <h4 className="mb-2 text-xl font-semibold pt-28 lg:pr-28">Add A Product</h4>
+        <h4 className="mb-2 text-xl font-semibold pt-28 lg:pr-28">Choose a Category</h4>
           <select className="border bg-[#B88E2E] text-white rounded p-2 mb-2 lg:pr-28">
-            <option className="">Choose a Product</option>
-            <option>Product 1</option>
-            <option>Product 2</option>
-            <option>Product 3</option>
+            <option className="">Choose a Category</option>
+            <option>Furniture</option>
+          <option value="Outdoor">Outdoor</option>
+          <option value="Decor">Decor</option>
           </select>
          
         </div>
@@ -156,3 +156,6 @@ height={316}
 
 
 export default Comparison
+
+
+

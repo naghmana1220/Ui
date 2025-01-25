@@ -1,4 +1,4 @@
-"use client"
+//"use client"
  import Image from "next/image";
 
  const Hero = () => {
@@ -31,17 +31,17 @@
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 <div className="overflow-hidden rounded-lg shadow-lg">
                  <Image src="/images/Hero2.png" alt="Image 1" width={300} height={480} className="w-full h-auto" /> 
-                 Dining
+                  <p className=" text-center justify-center font-serif text-gray-600">Dining</p>
                 </div>
                 <div className="overflow-hidden rounded-lg shadow-lg">
                     <Image src="/images/Hero3.png" alt="Image 2"  width={381} height={480} className="w-full h-auto" />
-                    Living
+                    <p className=" text-center justify-center font-serif text-gray-600">Living</p>
                 </div>
 
 
  <div className="overflow-hidden rounded-lg shadow-lg items-center justify-center">
                     <Image src="/images/Hero4.png" alt="Image 3" width={381} height={480}  className="w-full h-auto" />
-                    Bedroom
+                    <p className=" text-center justify-center font-serif text-gray-600">Bedroom</p>
                 </div>
             </div>
         </div>
