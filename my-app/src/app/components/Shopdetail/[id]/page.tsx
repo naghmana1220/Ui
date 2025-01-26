@@ -31,7 +31,7 @@ const Shopdetail = async ({ params }: { params: { id: string } }) => {
   }
 
   return (
-    <div className="p-4 bg-white text-gray-200">
+    <div className="p-4 bg-white text-gray-200 lg:w-[1900px]">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-serif text-cyan-500 mb-4">
           {product.title}
