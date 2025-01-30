@@ -17,24 +17,40 @@ const Explore = () => {
 
         <div className="flex flex-col md:flex-row items-start sm:h-[400px] sm:w-[500px]">
           <div className="relative w-64 sm:w-36 h-64 md:w-80 md:h-80 mb-4 md:mb-0">
-            <Image
+            {/* <Image
               src="/images/Explore1.png"
               objectFit="cover"
               width={290}
               height={382}
               alt="Large Image"
-            />
+            /> */}
+            <Image
+  src="/images/Explore1.png"
+  alt="Large Image"
+  width={290}
+  height={382}
+  style={{ objectFit: 'cover' }}
+/>
+
           </div>
 
           <div className="w-40 h-48 md:w-64 md:h-64 ml-4 ">
-            <Image
+            {/* <Image
               src="/images/Explore2.png"
               objectFit="cover"
               width={370}
               height={486}
               alt="Small Image"
             />
-           
+            */}
+            <Image
+  src="/images/Explore2.png"
+  alt="Large Image"
+  width={290}
+  height={382}
+  style={{ objectFit: 'cover' }} // Use the 'style' prop instead of 'objectFit'
+/>
+
             </div>
           </div>
         </div>

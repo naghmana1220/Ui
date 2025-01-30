@@ -12,6 +12,8 @@ import Blog from "./components/Blog/page";
 import Thankyou from "./components/Thankyou/page";
 //import Review from "./components/Review";
 import ProductListing from "./components/ProductListing";
+import cart from "./components/cart/page";
+
 
 
 
@@ -19,7 +21,6 @@ import ProductListing from "./components/ProductListing";
         const Home = () => {
           return(
       <div>
-
         <Hero />
     <Product />
     <Explore />

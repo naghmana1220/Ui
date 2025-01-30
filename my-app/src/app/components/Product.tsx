@@ -162,44 +162,8 @@ const Product = () => {
                 ))}
             </div>
 
-            {/* Cart Section */}
-            <div className="mt-10 p-4 bg-[#FCF8F3] rounded-md">
-                <h2 className="text-3xl font-semibold mb-4 text-gray-700">Cart</h2>
-                {cart.length > 0 ? (
-                    cart.map((item) => (
-                        <div
-                            key={item.id}
-                            className="flex items-center gap-4 border-b border-gray-300 py-4"
-                        >
-                            {/* Product Image */}
-                            <Image
-                                src={item.image}
-                                alt={item.title}
-                                width={80}
-                                height={80}
-                                className="rounded-md object-cover"
-                            />
-                            {/* Product Details */}
-                            <div className="flex-1">
-                                <h3 className="text-lg font-semibold">{item.title}</h3>
-                                <p className="text-gray-500">Quantity: {item.quantity}</p>
-                                <p className="text-gray-800 font-semibold">
-                                    Rp {(item.price * item.quantity).toLocaleString()}
-                                </p>
-                            </div>
-                            {/* Remove Button */}
-                            <button
-                                className="bg-red-500 text-white px-4 py-2 rounded-md"
-                                onClick={() => removeFromCart(item.id)}
-                            >
-                                Remove
-                            </button>
-                        </div>
-                    ))
-                ) : (
-                    <p className="text-gray-700">Your Cart is empty.</p>
-                )}
-            </div>
+           
+    
 
             {/* Show More Button */}
             <div className="flex justify-center mt-8">

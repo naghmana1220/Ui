@@ -157,5 +157,3 @@ height={316}
 
 export default Comparison
 
-
-

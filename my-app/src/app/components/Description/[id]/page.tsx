@@ -1,192 +1,14 @@
-// // //acurate dynamic working
-// import { client } from "@/sanity/lib/client";
-// import Image from "next/image";
-// import Review from "../../Review";
-// import ProductListing from "../../ProductListing";
-
-
-// const Shopdetail = async ({ params }: { params: { id: string } }) => {
-
-
-//   // Fetch product details by ID
-//   const product = await client.fetch(
-//      `
-//     *[_type == "product" && _id == $id][0]{
-//       title,
-//       description,
-//       productImage{
-//         asset->{url}
-//       },
-//       price,
-//       tags,
-//       discountPercentage,
-//       isNew
-//     }
-//   `,
-//     { id: params.id }
-//   );
-
-//   if (!product) {
-//     return <div className="p-4 text-red-500">Product not found!</div>;
-//   }
-
-//   return (
-//     <div className="p-4 bg-white text-gray-200 lg:w-[1900px]">
-//       <div className="max-w-4xl mx-auto">
-//         <h1 className="text-4xl font-serif text-cyan-500 mb-4">
-//           {product.title}
-//         </h1>
-//         <div className="flex flex-col md:flex-row gap-6 lg:flex-col">
-//           {/* Product Image */}
-//           <div className="flex-shrink-0">
-//             <Image
-//               src={product.productImage.asset.url}
-//               alt={product.title}
-//               width={600}
-//               height={600}
-//               className="rounded-lg items-center justify-center"
-//             />
-//           </div>
-
-//           {/* Product Details */}
-//           <div className="flex-grow">
-//             <p className="text-gray-900 text-lg mb-4">{product.description}</p>
-//             <p className="text-green-500 font-bold text-2xl">
-//               Price: ${product.price}
-//             </p>
-//             {product.discountPercentage && (
-//               <p className="text-red-500">
-//                 Discount: {product.discountPercentage}%
-//               </p>
-//             )}
-//             {product.isNew && (
-//               <span className="text-blue-500 text-sm">New Arrival</span>
-//             )}
-
-//             {/* Product Tags */}
-//             <div className="mt-4">
-//               <h3 className="text-lg font-semibold text-gray-900">Tags:</h3>
-//               <div className="flex flex-wrap gap-2 mt-2">
-//                 {product.tags?.map((tag: string, index: number) => (
-//                   <span
-//                     key={index}
-//                     className="bg-gray-200 text-gray-900 px-2 py-1 rounded text-xs"
-//                   >
-//                     {tag}
-//                   </span>
-//                 ))}
-//               </div>
-//             </div>
-//           </div>
-//           <Review />
-//           <ProductListing />
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Shopdetail;
-// import { client } from "@/sanity/lib/client";
-// import Image from "next/image";
-// import Review from "../../Review";
-// import ProductListing from "../../ProductListing";
-
-// const Shopdetail = async ({ params }: { params: { id: string } }) => {
-//   // Fetch product details by ID
-//   const product = await client.fetch(
-//     `*[_type == "product" && _id == $id][0]{
-//       title,
-//       description,
-//       productImage{
-//         asset->{url}
-//       },
-//       price,
-//       tags,
-//       discountPercentage,
-//       isNew
-//     }`,
-//     { id: params.id }
-//   );
-
-//   if (!product) {
-//     return <div className="p-4 text-red-500">Product not found!</div>;
-//   }
-
-//   return (
-//     <div className="p-4 bg-white text-gray-200 lg:w-[1900px]">
-//       <div className="max-w-4xl mx-auto">
-//         <h1 className="text-4xl font-serif text-cyan-500 mb-4">
-//           {product.title}
-//         </h1>
-//         <div className="flex flex-col md:flex-row gap-6 lg:flex-col">
-//           {/* Product Image */}
-//           <div className="flex-shrink-0">
-//             <Image
-//               src={product.productImage.asset.url}
-//               alt={product.title}
-//               width={600}
-//               height={600}
-//               className="rounded-lg items-center justify-center"
-//             />
-//           </div>
-
-//           {/* Product Details */}
-//           <div className="flex-grow">
-//             <p className="text-gray-900 text-lg mb-4">{product.description}</p>
-//             <p className="text-green-500 font-bold text-2xl">
-//               Price: ${product.price}
-//             </p>
-//             {product.discountPercentage && (
-//               <p className="text-red-500">
-//                 Discount: {product.discountPercentage}%
-//               </p>
-//             )}
-//             {product.isNew && (
-//               <span className="text-blue-500 text-sm">New Arrival</span>
-//             )}
-
-//             {/* Product Tags */}
-//             <div className="mt-4">
-//               <h3 className="text-lg font-semibold text-gray-900">Tags:</h3>
-//               <div className="flex flex-wrap gap-2 mt-2">
-//                 {product.tags?.map((tag: string, index: number) => (
-//                   <span
-//                     key={index}
-//                     className="bg-gray-200 text-gray-900 px-2 py-1 rounded text-xs"
-//                   >
-//                     {tag}
-//                   </span>
-//                 ))}
-//               </div>
-//             </div>
-//           </div>
-//           <Review />
-//           <ProductListing />
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Shopdetail;
-
-
-
-
-
-
 
 import { client } from "@/sanity/lib/client";
 import Image from "next/image";
-import ProductListing from "../../ProductListing";
+import ProductListing from "../../ProductListing"
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 
 const Shopdetail = async ({ params }: { params: { id: string } }) => {
   
   const product = await client.fetch(
-    `*[_type == "product" && _id == $id][0]{
+    `*[_type == "product" && _id == $id ][0]{
       title,
       description,
       productImage{
@@ -199,12 +21,14 @@ const Shopdetail = async ({ params }: { params: { id: string } }) => {
     }`,
     { id: params.id }
   );
+  console.log(product);
+
 
   if (!product) {
     return <div className="p-4 text-red-500">Product not found!</div>;
   }
 
-
+  
 
   return (
     <div className="max-w-[1440px] mx-auto font-Poppins">
@@ -218,15 +42,15 @@ const Shopdetail = async ({ params }: { params: { id: string } }) => {
         <p className="border-l border-[#9F9F9F] pl-[34px] hover:underline cursor-pointer">
           {product.title}
         </p>
-       </div>
+      </div>
 
-       {/* Product Detail Section */}
-       <div className="max-w-[1240px] mx-auto flex flex-col lg:flex-row gap-10 lg:gap-[82px] items-center lg:items-start">
-         {/* Product Images */}
-         <div className="flex flex-col md:flex-row items-center md:items-stretch gap-[31px]">
-           <div className="w-[150px] h-[100px] flex flex-col gap-8">
-               <div className="w-full  flex p-3 justify-center items-center rounded border-2 border-black">
-               <Image
+      {/* Product Detail Section */}
+      <div className="max-w-[1240px] mx-auto flex flex-col lg:flex-row gap-10 lg:gap-[82px] items-center lg:items-start">
+        {/* Product Images */}
+        <div className="flex flex-col md:flex-row items-center md:items-stretch gap-[31px]">
+          <div className="w-[150px] h-[100px] flex flex-col gap-8">
+            <div className="w-full  flex p-3 justify-center items-center rounded border-2 border-black">
+              <Image
                 src={product.productImage.asset.url}
                 alt={product.title}
                 width={121}
@@ -235,8 +59,7 @@ const Shopdetail = async ({ params }: { params: { id: string } }) => {
             </div>
           </div>
 
-         <div className="max-w-[423px] h-[500px] w-[300px] sm:w-full flex justify-center items-center">
-      
+          <div className="max-w-[423px] h-[500px] w-[300px] sm:w-full flex justify-center items-center">
             <Image
               src={product.productImage.asset.url}
               width={450}
@@ -255,7 +78,7 @@ const Shopdetail = async ({ params }: { params: { id: string } }) => {
             {/* Product Rating */}
             <div className="flex items-center flex-wrap mt-[15px]">
               <div className="text-[#FFAD33] text-2xl mr-4">★★★★</div>
-              <p className="opacity-50 text-[14px] text-gray-900 font-normal mr-4 border-l-[#9F9F9F] border-l pl-4">
+              <p className="opacity-50 text-[14px] text-[#9F9F9F] font-normal mr-4 border-l-[#9F9F9F] border-l pl-4">
                 5 Customer Review
               </p>
             </div>

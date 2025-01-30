@@ -16,7 +16,7 @@ const ProductListing = () => {
             <h2 className="text-5xl font-serif text-gray-600 text-center mb-8">Highly Recommended Products</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {products.map((product) => (
-                    <Link key={product.id} href={`/product/${product.id}`}>
+                     <Link key={product.id} href={`/product/${product.id}`}>
                         <div className=" p-4  hover:shadow-lg hover:shadow-cyan-500">
                             <Image
                                 src={product.image}
@@ -25,7 +25,7 @@ const ProductListing = () => {
                                 height={300}
                                  className=" object-cover"
                             />
-                            <h3 className="mt-4 text-xl font-semibold">{product.name}</h3>
+                            <h3 className="mt-4 text-xl font-semibold text-gray-600">{product.name}</h3>
                             <p className="text-lg text-gray-700">{product.price}</p>
                             <p
                                 className={`text-sm ${
@@ -37,7 +37,7 @@ const ProductListing = () => {
                                 {product.stock}
                             </p>
                         </div>
-                    </Link>
+                     </Link>
                 ))}
             </div>
         </div>
@@ -46,5 +46,4 @@ const ProductListing = () => {
 };
 
 export default ProductListing;
-
 
